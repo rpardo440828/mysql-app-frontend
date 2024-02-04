@@ -16,7 +16,7 @@ const Books = () => {
     useEffect(()=>{
         const fetchData = async ()=>{
             try{
-                const res = await axios.get(`/post/books/${userId}`);
+                const res = await axios.get(`https://my-sql-deployment-027007fd602b.herokuapp.com/api/post/books/${userId}`);
                 setBooks(res.data);
             }catch(err){
                 console.log(err);

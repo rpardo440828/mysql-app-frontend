@@ -16,7 +16,7 @@ const Shows = () => {
     useEffect(()=>{
         const fetchData = async ()=>{
             try{
-                const res = await axios.get(`/post/shows/${userId}`);
+                const res = await axios.get(`https://my-sql-deployment-027007fd602b.herokuapp.com/api/post/shows/${userId}`);
                 setShows(res.data);
             }catch(err){
                 console.log(err);

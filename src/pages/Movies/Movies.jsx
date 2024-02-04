@@ -16,7 +16,7 @@ const Movies = () => {
     useEffect(()=>{
         const fetchData = async ()=>{
             try{
-                const res = await axios.get(`/post/movies/${userId}`);
+                const res = await axios.get(`https://my-sql-deployment-027007fd602b.herokuapp.com/api/post/movies/${userId}`);
                 setMovies(res.data);
             }catch(err){
                 console.log(err);

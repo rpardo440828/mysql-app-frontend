@@ -19,7 +19,7 @@ const Register = () => {
     const handleSubmit = async e =>{
         e.preventDefault();
         try {
-            await axios.post("/auth/register", inputs);
+            await axios.post("https://my-sql-deployment-027007fd602b.herokuapp.com/api/auth/register", inputs);
             navigate("/login");
         }catch(err) {
             setError(err.response.data);

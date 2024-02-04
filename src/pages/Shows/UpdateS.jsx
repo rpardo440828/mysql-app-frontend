@@ -15,7 +15,7 @@ const UpdateS = () => {
 
     
     useEffect(()=>{
-        axios.get(`http://localhost:8800/api/post/shows/${userId}/${bid}`)
+        axios.get(`https://my-sql-deployment-027007fd602b.herokuapp.com/api/post/shows/${userId}/${bid}`)
         .then(res => {
             setShowTitle(res.data[0].title);
             setShowDesc(res.data[0].desc);

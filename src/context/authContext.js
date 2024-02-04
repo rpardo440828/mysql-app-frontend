@@ -10,12 +10,12 @@ export const AuthContextProvider = ({children})=>{
     );
 
     const login = async(inputs)=>{
-        const res = await axios.post("/auth/login", inputs);
+        const res = await axios.post("https://my-sql-deployment-027007fd602b.herokuapp.com/api/auth/login", inputs);
         setCurrentUser(res.data);
     };
 
     const logout = async(inputs)=>{
-        const res = await axios.post("/auth/logout");
+        const res = await axios.post("https://my-sql-deployment-027007fd602b.herokuapp.com/api/auth/logout");
         setCurrentUser(null);
     };
 
