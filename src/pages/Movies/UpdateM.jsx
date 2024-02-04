@@ -15,7 +15,7 @@ const UpdateM = () => {
 
     
     useEffect(()=>{
-        axios.get(`http://localhost:8800/api/post/movies/${userId}/${bid}`)
+        axios.get(`https://my-sql-deployment-027007fd602b.herokuapp.com/api/post/movies/${userId}/${bid}`)
         .then(res => {
             setMovieTitle(res.data[0].title);
             setMovieDesc(res.data[0].desc);
@@ -30,7 +30,7 @@ const UpdateM = () => {
     const handleClick = async e =>{
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:8800/api/post/movies/${currentUser.id}`, {title, desc, img, bid})
+            await axios.put(`https://my-sql-deployment-027007fd602b.herokuapp.com/api/post/movies/${currentUser.id}`, {title, desc, img, bid})
             .then(res => {
                 if(res.data.updated) {
                     navigate(`/movies/${currentUser.id}`);

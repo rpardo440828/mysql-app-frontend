@@ -24,7 +24,7 @@ const AddS = () => {
     const handleClick = async e =>{
         e.preventDefault();
         try {
-            await axios.post(`http://localhost:8800/api/post/shows/${currentUser.id}`, show);
+            await axios.post(`https://my-sql-deployment-027007fd602b.herokuapp.com/api/post/shows/${currentUser.id}`, show);
             navigate(`/shows/${currentUser.id}`);
         }catch(err){
             console.log(err);

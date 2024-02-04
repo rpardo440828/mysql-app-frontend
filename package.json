@@ -37,5 +37,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy":"http://localhost:8800/api/"
+  "proxy":"https://my-sql-deployment-027007fd602b.herokuapp.com/api/"
 }

@@ -28,7 +28,7 @@ const Books = () => {
     // Need to fix delete after implementation
     const handleDelete = async (bid)=>{
         try {
-            await axios.delete(`http://localhost:8800/api/post/books/${bid}`);
+            await axios.delete(`https://my-sql-deployment-027007fd602b.herokuapp.com/api/post/books/${bid}`);
             window.location.reload()
         } catch (err) {
             console.log(err);

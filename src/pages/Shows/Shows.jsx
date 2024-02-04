@@ -27,7 +27,7 @@ const Shows = () => {
 
     const handleDelete = async (bid)=>{
         try {
-            await axios.delete(`http://localhost:8800/api/post/shows/${bid}`);
+            await axios.delete(`https://my-sql-deployment-027007fd602b.herokuapp.com/api/post/shows/${bid}`);
             window.location.reload()
         } catch (err) {
             console.log(err);

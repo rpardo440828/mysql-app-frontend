@@ -30,7 +30,7 @@ const UpdateS = () => {
     const handleClick = async e =>{
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:8800/api/post/shows/${currentUser.id}`, {title, desc, img, bid})
+            await axios.put(`https://my-sql-deployment-027007fd602b.herokuapp.com/api/post/shows/${currentUser.id}`, {title, desc, img, bid})
             .then(res => {
                 if(res.data.updated) {
                     navigate(`/shows/${currentUser.id}`);
