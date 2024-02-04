@@ -15,6 +15,7 @@ import UpdateM from './pages/Movies/UpdateM';
 import Shows from './pages/Shows/Shows';
 import AddS from './pages/Shows/AddS';
 import UpdateS from './pages/Shows/UpdateS';
+import { useContext } from 'react';
 
 const Layout = () => {
   return (
