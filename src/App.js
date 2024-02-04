@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import { AuthContext } from './context/authContext'; 
 import Home from './pages/Home';
 import Books from './pages/Books/Books';
 import Login from './pages/Login';
@@ -15,7 +14,6 @@ import UpdateM from './pages/Movies/UpdateM';
 import Shows from './pages/Shows/Shows';
 import AddS from './pages/Shows/AddS';
 import UpdateS from './pages/Shows/UpdateS';
-import { useContext } from 'react';
 
 const Layout = () => {
   return (
@@ -84,9 +82,6 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  const { logout } = useContext(AuthContext);
-
-  window.onunload = {logout};
   return (
     <div className="app">
       <div className='container'>
